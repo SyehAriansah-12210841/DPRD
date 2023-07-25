@@ -1,0 +1,49 @@
+@extends('template.base')
+@section('title', 'sejarah')
+@section('content')
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{route('home')}}">Beranda</a></li>
+            <li class="breadcrumb-item active"><a class="{{(request()->is('profil/sejarah')) ? 'text-secondary' : ''}}" href="{{route('sejarah')}}">Sejarah </a></li>
+        </ol>
+    </nav>
+</div>
+<div class="container my-5 px-5">
+    <h1 class="fs-3 mb-3">Sejarah DPRD Kapuas Hulu</h1>
+    <img src="{{asset('/img/dprd.jpg')}}" class="img-fluid mx-auto d-block rounded my-3" alt="">
+    <p>Dalam tahun awal berdirinya Republik Indonesia, istilah DPRD Provinsi Jawa Barat belum digunakan. Meski demikian, hal ini tidak  berarti bahwa tidak terdapat lembaga legislatif semacam DPRD. Pada tahun awal kemerdekaan lembaga semacam DPRD ini sesungguhnya telah juga hadir dengan nama Badan Perwakilan Rakyat Daerah (BPRD) Jawa Barat. Karena itu asal-usul dari kehadiran DPRD Provinsi Jawa Barat tidak dapat dipisahkan dari kehadiran BPRD Jawa Barat tersebut. Pada masa itu, BPRD dipimpin oleh R. Otto Iskandardinata dengan wakilnya Dr. Soeratman Erwin dan Mr. Samsudin.
+
+Selanjutnya, pada masa transisi setelah kembalinya status Republik Indonesia Serikat ke dalam NKRI, di Jawa Barat dibentuk DPRD Sementara yang terdiri dari 60 orang anggota yang berasal dari 22 Parpol dan dipimpin oleh Djaja Rahmat (1950-1955).
+
+Istilah DPRD Provinsi Jawa Barat baru dikenal pada tahun 1955 yaitu setelah Pemilihan Umum Pertama yang dilakukan pada 29 September 1955. Sebagai tindaklanjut dari upaya untuk mewujudkan DPRD atas dasar pemilihan itu, pemerintah mengeluarkan  UU No. 19/1956 yang merupakan ketentuan hukum pemilihan daerah. Setahun kemudian, untuk pertama kali dalam sejarah perkembangannya, diadakan pemilihan terhadap anggota DPRD Jawa Barat. Pada kurun waktu 1957-1960 jumlah anggota DPRD Jawa Barat sebanyak 75 orang yang berasal dari 14 Parpol dan diketuai oleh Oja Somantri.
+
+Pada masa yang dikenal dengan Orde Lama sampai dengan 1974, Undang-undang yang menjadi landasan bagi kehadiran DPRD Jawa Barat adalah UU No. 18/1965, dan salah satu pasalnya memasung eksistensi DPRD yakni DPRD dalam menjalankan tugasnya bertanggungjawab kepada Kepala Daerah. Selain itu, dalam UU ini juga disebutkan, bahwa keputusan-keputusan yang dikeluarkan oleh DPRD harus mendapatkan tandatangan dari Kepala Daerah. Ini berarti kedudukan DPRD di bawah Kepala Daerah. Ketentuan hukum yang terdapat dalam UU No. 18/1965 mengakibatkan kekuasaan DPRD terhadap Kepala Daerah terasa sangat lemah yang pada gilirannya mempengaruhi pelaksanaan fungsi dan peran legislatifnya. Pada periode 1960-1967 , DPRD Jawa Barat  dikomandoi oleh Letjen. TNI.H. Mashudi dan selanjutnya pada periode 1967-1971 DPRD Jawa Barat diketuai oleh Rachmat Sulaeman dengan jumlah anggota DPRD 70 orang yang berasal dari 8 Parpol.
+
+Seiring dengan  dikeluarkannya UU No. 5/1974, terjadi juga perubahan dalam kedudukan DPRD. Ketentuan hukum yang terdapat dalam UU ini menyatakan, bahwa Pemerintah Daerah adalah Kepala Daerah dan DPRD. Penafsiran terhadap statement ini adalah DPRD dan Kepala Daerah dalam kedudukan yang sama tinggi. Yang membedakannya  adalah bahwa Kepala Daerah merupakan pelaksana dari peraturan perundangan di daerah sedangkan DPRD melaksanakan tugas di bidang legislatif. Periode 1971-1977 DPRD Tingkat I Provinsi Jawa Barat , kembali dipimpin oleh Rahmat Sulaeman dengan anggota berjumlah 74 orang dari 4 Fraksi.
+
+Selanjutnya, berturut-turut dalam era kepemimpinan Presiden Soeharto, pada tahun 1977-1982 DPRD Jawa Barat diketuai oleh Brigjen TNI (Purn) H. Adjat Sudradjat, Mayjen TNI (Purn) Suratman (1982-1992), Brigjen TNI (Purn) H. Agus Muhyidin (1992-1997). Pada masa ini seiring dengan meningkatnya jumlah penduduk Jawa Barat, maka jumlah anggota legislative pun mengalami peningkatan menjadi 100 orang anggota. 
+
+Pada tahun 1997 terjadi gerakan reformasi yang pada akhirnya meruntuhkan kepemimpinan Orde Baru. Hal ini berpengaruh terhadap masa kerja DPRD provinsi Jawa Barat  yang  hanya berlangsung selama  tiga  tahun, karena pada tahun 1998 sebagaimana tuntutan reformasi dilaksanakan Pemilu, dipimpin oleh Mayjen TNI (Purn) H. Abdul Nurhaman, S.Ip, S.Sos.
+
+Lahirnya UU No. 22/1999 dan UU No. 25/1999 sebagai reaksi dari gerakan reformasi, merangkum dua pikiran utama yakni penyerahan sebanyak mungkin kewenangan pemerintahan dalam hubungan dosmetik kepada daerah (kecuali  keuangan dan moneter, politik luar negeri, peradilan dan keagamaan) serta penguatan peran DPRD dalam pemilihan dan penetapan Kepala Daerah. Pemberdayaan fungsi-fungsi DPRD dalam bidang legislasi, representasi, dan penyalur aspirasi masyarakat harus dilakukan. Kebijakan desentralisasi merupakan bagian dari kebijakan demokratisasi pemerintahan. Karena itu penguatan peran DPRD baik dalam proses legislasi maupun pengawasan atas jalannya pemerintahan daerah perlu dilakukan. Dalam UU 22/1999 ditentukan posisi  DPRD sejajar dengan pemerintah daerah, bukan sebagai bagian dari pemerintah daerah.
+
+Pada periode 1999-2004 , DPRD Provinsi Jawa Barat sesuai kewenangannya memlih Kepala Daerah, memilih anggota MPR dari utusan daerah, mengusulkan pengangkatan dan pemberhentian Kepala daerah dan hak DPRD meminta pertanggungjawaban Kepala daerah. Kepemimpinan DPRD pada periode ini dipimpin oleh Ir. H. Idin Rafiudin (dalam perjalanan kepemimpinannya beliau wafat) yang  selanjunya digantikan  oleh Drs.H. Eka Santosa.
+
+Sejalan dengan perkembangan demokrasi, dan perbaikan kehidupan ketatanegaraan, Pemerintah mengeluarkan UU No. 32 tahun 2004. Dewan Perwakilan Rakyat Daerah didefinisikan sebagai lembaga perwakilan rakyat daerah dan berkedudukan sebagai unsur penyelenggaraan pemerintahan daerah. Selanjutnya,  dalam hubungannya dengan eksekutif, pasal 3 menyebutkan bahwa pemerintah daerah terdiri atas pemerintah dan DPRD. Hal itu berarti DPRD berkedudukan sejajar dan menjadi mitra dari pemerintah daerah.
+
+Pemilu tahun 2004 diikuti oleh 24 Partai Politik, dan yang berhasil meraih kursi di DPRD Provinsi Jawa Barat 10 Parpol yakni Golkar, PDI-P, PKS,PPP, Demokrat, PKB, PAN, PBB, PKPB, PDS, yang selanjutnya menjadi 7 fraksi. DPRD Provinsi Jawa Barat Periode 2004 - 2009 diketuai oleh Drs.H.A.M. Ruslan (Golkar), dengan para wakil ketua H. Rudi Harsatanaya (PDI-P), drh. Achmad Ru’yat, M.Sc. (PKS, setelah diambil sumpahnya menjadi wakil walikota Bogor, digantikan oleh H. Husin M. Albanjari, Dipl.Ing. dan H. Amin Suparmin,S.Hi. (PPP).
+
+Sedangkan Dewan Perwakilan Rakyat Daerah (DPRD) Provinsi Jawa Barat periode 2009-2014 keanggotaannya diresmikan berdasarkan Keputusan Menteri Dalam Negeri Nomor 161.32 - 556 Tahun 2009, pada  tanggal 31 Agustus 2009  dalam Rapat Paripurna Istimewa Pengambilan Sumpah/Janji Anggota DPRD Provinsi Jawa Barat Hasil Pemilu 2009 bertempat di  Gedung Merdeka Bandung.  Mereka berasal dari 9 partai dengan jumlah 100 anggota yakni : Partai Demokrat 28 orang, Partai Demokrasi Indonesia Perjuangan 17 orang, Partai Golongan Karya 16 orang, Partai Keadilan Sejahtera 13 orang, Partai Gerakan Indonesia Raya 8 orang, Partai Persatuan Pembangunan 8 orang, Partai Amanat Nasional 5 orang, Partai Hati Nurani Rakyat 3 orang dan Partai Kebangkitan Bangsa 2 orang. Tergabung dalam 8 Fraksi yakni F. Demokrat, F.PDI-P, F. Golkar, F. PKS, F. Gerindra, F. PPP, F. PAN, F.Hanura- PKB. Dalam Rapat Paripurna Istimewa tersebut, ditetapkan Pimpinan Sementara DPRD Propinsi Jawa Barat,  yang berasal dari dua partai peraih kursi terbesar, masing-masing H. Awing Asmawi, SE (Partai Demokrat) sebagai Ketua Sementara dan Drs. H. Syarif Bastaman  (PDIP)  sebagai Wakil Ketua Sementara.
+
+Selanjutnya pada tanggal 16 Oktober 2009, berdasarkan Keputusan Menteri Dalam Negeri Nomor : 161.32-712 Tahun 2009 Pimpinan DPRD Provinsi Jawa Barat mengucapkan sumpah/janji dalam Rapat Paripurna Istimewa dengan susunan sebagai berikut : Ketua DPRD Ir.H. Irfan Suryanagara (F. Partai Demokrat), Wakil Ketua : H.M Rudi Harsa Tanaya (F. PDIP), Drs.H.Uu Rukmana M.Si. (F. Partai Golkar), Drs.H. Nur Suprianto, MM (FPKS) dan H. Komarudin Taher, S.Ag. (FPPP).
+
+Sebagai hasil dari Pemilu Legislatif Tahun 2014, keanggotaan DPRD Provinsi pun mengalami perubahan. Dengan jumlah anggota masih 100 orang, untuk DPRD Provinsi Jawa Barat Periode 2014-2019, terjadi perubahan jumlah keanggotaan partai pemenang yaitu terdiri dari  10 Partai (PDIP 20 orang; Golkar 17 orang; PKS 12 orang; Demokrat12 orang; Gerindra 11 orang; PPP 9 orang; PKB 7 orang; Nasdem 5 orang; PAN 4 orang; Hanura 3 orang). Dari 10 partai pemenang, DPRD Provinsi Jawa Barat Periode 2014-2019 memiliki 8 Fraksi yaitu Fraksi Gabungan Golkar Amanah, Fraksi PDIP, Fraksi PKS, Fraksi Demokrat, Fraksi Gerindra, Fraksi PPP, Fraksi PPP, Fraksi Gabungan Restorasi Nurani Rakyat.
+
+Peresmian keanggotaan DPRD Provinsi Jawa Barat Periode 2014-2019 dilakukan pada Rapat Paripurna Istimewa DPRD Provinsi Jawa Barat tanggal 1 September 2014 di Gedung Merdeka berdasarkan Surat Keputusan Mendagri Nomor 161.32-3442 Tahun 2014.
+
+Pada tanggal 22 Oktober di Gedung DPRD Provinsi Jawa Barat berdasarkan Surat Keputusan Mendagri Nomor 161.32-3862 Tahun 2014, dilakukan pelantikan Pimpinan DPRD Provinsi Jawa Barat Periode 2014-2019 yaitu Ineu Purwadewi Sundari dari PDI.P sebagai Ketua DPRD, H.M Irianto Syafiuddin (P. Golkar), Harris Yuliana (PKS), Irfan Suryanagara (P. Demokrat) serta Abdul Harris Bobihoe (P. Gerindra) sebagai Wakil Ketua.
+
+Seiring dengan perubahan dan perkembangan sosial dan politik yang terjadi di masyarakat, maka pada lima tahun terakhir juga terjadi perubahan perundang-undangan, yaitu dengan terbitnya UU Nomor 17 Tahun 2014 tentang MPR, DPR, DPD dan DPRD ( UU MD3) serta UU Nomor 9 Tahun 2015 tentang Perubahan Kedua Atas UU Nomor 23 Tahun 2014 Tentang Pemerintahan Daerah.</p>
+</div>
+    @endsection
