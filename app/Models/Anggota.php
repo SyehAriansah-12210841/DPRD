@@ -16,4 +16,8 @@ class Anggota extends Model
     {
         return $this->hasOne(Dapil::class, 'id', 'dapil_id');
     }
+    public function fraksi()
+    {
+        return $this->hasOne(Fraksi::class, 'id', 'fraksi_id');
+    }
 }

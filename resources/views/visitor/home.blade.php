@@ -1,5 +1,5 @@
 @extends('template.base')
-@section('title', 'Beranda')
+@section('title', 'Dewan Perwakilan Rakyat Daerah Kapuas Hulu')
 @section('content')
 <x-carousel />
 
@@ -16,9 +16,9 @@
                 {{-- ketua --}}
                 @if ($ketua)
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 pt-5 mx-auto wow fadeInUp">
+                    <div class="col-8 col-lg-3 col-md-6 pt-5 mx-auto wow fadeInUp">
                         <a href="/profil/{{$ketua->id}}">
-                            <div class="card service-item d-flex h-100">
+                            <div class="card service-item border-0 d-flex h-100">
                                 <div class="overflow-hidden" style="max-height: 250px">
                                     <img src="/storage/{{$ketua->gambar}}" class="card-img-top" alt="...">
                                 </div>
@@ -36,9 +36,9 @@
                 {{-- wakil ketua --}}
                 <div class="row gy-5 gx-4">
                     @forelse ($wakil as $anggota)
-                    <div class="col-lg-3 col-md-6 pt-5 mx-auto wow fadeInUp">
+                    <div class=" col-6 col-lg-3 col-md-6 pt-5 mx-auto wow fadeInUp">
                         <a href="/profil/{{$anggota->id}}">
-                            <div class="card service-item d-flex h-100">
+                            <div class="card service-item border-0 d-flex h-100">
                                 <div class="overflow-hidden" style="max-height: 250px">
                                     <img src="/storage/{{$anggota->gambar}}" class="card-img-top" alt="...">
                                 </div>

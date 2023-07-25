@@ -30,6 +30,8 @@
                             <th scope="col">Nama</th>
                             <th scope="col">Jabatan</th>
                             <th scope="col">Dapil</th>
+                            <th scope="col">Fraksi</th>
+                            <th scope="col">Jabatan Fraksi</th>
                             <th scope="col">Aksi</th>
 
                         </tr>
@@ -41,6 +43,10 @@
                             <td>{{$anggota->nama}}</td>
                             <td>{{$anggota->jabatan}}</td>
                             <td>{{$anggota->dapil->nama}}</td>
+                            <td>{{$anggota->fraksi->nama}}</td>
+                            <td>{{$anggota->jabatan_fraksi}}</td>
+
+
                             <td>
                                 <a class="badge bg-primary text-decoration-none"
                                     href="{{route('anggota.show', ['anggota' => $anggota->id])}}">Detail</a>
@@ -60,7 +66,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="d-flex justify-content-center w-100 border">
+            <div class="d-flex justify-content-center w-100 ">
                 {{ $data->links() }}
             </div>
         </main>

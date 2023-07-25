@@ -6,6 +6,7 @@ use App\Http\Requests\StoreAnggotaRequest;
 use App\Http\Requests\UpdateAnggotaRequest;
 use App\Models\Anggota;
 use App\Models\Dapil;
+use App\Models\Fraksi;
 use Illuminate\Support\Facades\Storage;
 
 class AnggotaController extends Controller
@@ -15,7 +16,7 @@ class AnggotaController extends Controller
      */
     public function index()
     {
-        $data = Anggota::latest()->paginate(15)->withQueryString();
+        $data = Anggota::latest()->paginate(20)->withQueryString();
         return view('dashboard.anggota.index', compact('data'));
     }
 
@@ -25,7 +26,8 @@ class AnggotaController extends Controller
     public function create()
     {
         $data = Dapil::all();
-        return view('dashboard.anggota.create', compact('data'));
+        $fraksi = Fraksi::all();
+        return view('dashboard.anggota.create', compact('data', 'fraksi'));
     }
 
     /**
@@ -53,7 +55,8 @@ class AnggotaController extends Controller
     public function edit(Anggota $anggota)
     {
         $data = Dapil::all();
-        return view('dashboard.anggota.edit', compact('anggota', 'data'));
+        $fraksi = Fraksi::all();
+        return view('dashboard.anggota.edit', compact('anggota', 'data', 'fraksi'));
     }
 
     /**

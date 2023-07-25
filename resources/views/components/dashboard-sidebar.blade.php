@@ -2,7 +2,7 @@
     <div class="offcanvas-lg offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu"
         aria-labelledby="sidebarMenuLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="sidebarMenuLabel">DPRD Jawa Barat</h5>
+            <h5 class="offcanvas-title" id="sidebarMenuLabel">DPRD Kapuas Hulu</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"
                 aria-label="Close"></button>
         </div>
@@ -31,6 +31,14 @@
                             <use xlink:href="#file-earmark" />
                         </svg>
                         Kelola Dapil
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center gap-2" href="{{route('fraksi.index')}}">
+                        <svg class="bi">
+                            <use xlink:href="#file-earmark" />
+                        </svg>
+                        Kelola Fraksi
                     </a>
                 </li>
 

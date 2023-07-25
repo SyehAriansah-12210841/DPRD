@@ -35,7 +35,7 @@
                     <p class="fs-4 fw-bold">Pendidikan</p>
                     <p class="fs-5">{{$anggota->pendidikan}}</p>
                     <p class="fs-4 fw-bold">Fraksi</p>
-                    <p class="fs-5">{{$anggota->fraksi}}</p>
+                    <p class="fs-5">{{$anggota->fraksi->nama}}</p>
 
 
                 </div>

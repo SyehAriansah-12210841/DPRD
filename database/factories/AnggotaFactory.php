@@ -26,13 +26,15 @@ class AnggotaFactory extends Factory
         $path = 'uploads/' . $fileName . '.jpg';
         Storage::put('uploads/' . $fileName . '.jpg', $res->body());
         return [
+            'fraksi_id' => random_int(1, 4),
             'dapil_id' => random_int(1, 10),
             'nama' => $this->faker->name(),
-            'tempat_tanggal_lahir' => $this->faker->city . ',' . $birthDate . '( ' . Carbon::createFromDate($birthDate)->diffInYears() . ' tahun)',
+            'tempat_lahir' => $this->faker->city,
+            'tanggal_lahir' => $birthDate,
             'alamat' => $this->faker->address(),
             'pendidikan' => 'Doktor',
-            'fraksi' => 'Fraksi Partai GakTau',
             'jabatan' => 'Anggota',
+            'jabatan_fraksi' => 'Anggota',
             'periode' => $this->faker->date('Y') . '-' . $this->faker->date('Y'),
             'gambar' => $path
         ];

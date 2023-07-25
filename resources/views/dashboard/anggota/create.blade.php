@@ -63,16 +63,7 @@
                         </div>
                         @enderror
                     </div>
-                    <div class="mb-3">
-                        <label for="fraksi" class="form-label">Fraksi</label>
-                        <input type="text" name="fraksi" class="form-control @error('fraksi') is-invalid @enderror"
-                            id="fraksi" aria-describedby="name" value="{{old('fraksi')}}">
-                        @error('fraksi')
-                        <div class="invalid-feedback">
-                            {{$message}}
-                        </div>
-                        @enderror
-                    </div>
+
                     <div class="mb-3">
                         <label for="jabatan" class="form-label">Jabatan</label>
                         <input type="text" name="jabatan" class="form-control @error('jabatan') is-invalid @enderror"
@@ -83,11 +74,39 @@
                         </div>
                         @enderror
                     </div>
+
                     <div class="mb-3">
                         <label for="periode" class="form-label">Periode</label>
                         <input type="text" name="periode" class="form-control @error('periode') is-invalid @enderror"
                             id="periode" aria-describedby="name" value="{{old('pendidikan')}}">
                         @error('periode')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label for="jabatan_fraksi" class="form-label">Jabatan Sebagai Fraksi</label>
+                        <input type="text" name="jabatan_fraksi"
+                            class="form-control @error('jabatan_fraksi') is-invalid @enderror" id="jabatan_fraksi"
+                            aria-describedby="name" value="{{old('jabatan_fraksi')}}">
+                        @error('jabatan_fraksi')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <select name="fraksi_id" class="form-select @error('fraksi_id') is-invalid @enderror"
+                            aria-label="Default select example">
+                            <option selected>Fraksi</option>
+                            @foreach ($fraksi as $fraks)
+                            <option @if (old('fraksi_id')==$fraks->id) selected @endif
+                                value="{{$fraks->id}}">{{$fraks->nama}}</option>
+
+                            @endforeach
+                        </select>
+                        @error('fraksi_id')
                         <div class="invalid-feedback">
                             {{$message}}
                         </div>

@@ -27,8 +27,9 @@ class StoreAnggotaRequest extends FormRequest
             'tanggal_lahir' => 'required|date',
             'alamat' => 'required|string',
             'pendidikan' => 'required|string',
-            'fraksi' => 'required|string',
+            'fraksi_id' => 'required|string',
             'jabatan' => 'required|string',
+            'jabatan_fraksi' => 'required|string',
             'periode' => 'required|string',
             'dapil_id' => 'required|string',
             'gambar' => 'required|image'

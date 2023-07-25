@@ -13,7 +13,7 @@ class DapilController extends Controller
      */
     public function index()
     {
-        $data = Dapil::latest()->paginate(15)->withQueryString();
+        $data = Dapil::latest()->paginate(30)->withQueryString();
         return view('dashboard.dapil.index', compact('data'));
     }
 

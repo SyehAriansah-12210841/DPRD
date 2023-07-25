@@ -36,8 +36,8 @@
                     <div class="mb-3">
                         <label for="ttl" class="form-label">Tanggal Lahir</label>
                         <input name="tanggal_lahir" class="form-control @error('tanggal_lahir') is-invalid @enderror"
-                            type="date" id="ttl">{{old('tanggal_lahir') ? old('tanggal_lahir') :
-                        $anggota->tanggal_lahir}}
+                            type="date" id="ttl" value="{{old('tanggal_lahir') ? old('tanggal_lahir') :
+                            $anggota->tanggal_lahir->format('Y-m-d')}}">
                         @error('tanggal_lahir')
                         <div class="invalid-feedback">
                             {{$message}}
@@ -66,17 +66,7 @@
                         </div>
                         @enderror
                     </div>
-                    <div class="mb-3">
-                        <label for="fraksi" class="form-label">Fraksi</label>
-                        <input type="text" name="fraksi" class="form-control @error('fraksi') is-invalid @enderror"
-                            id="fraksi" aria-describedby="name"
-                            value="{{old('fraksi') ? old('fraksi') : $anggota->fraksi}}">
-                        @error('fraksi')
-                        <div class="invalid-feedback">
-                            {{$message}}
-                        </div>
-                        @enderror
-                    </div>
+
                     <div class="mb-3">
                         <label for="jabatan" class="form-label">Jabatan</label>
                         <input type="text" name="jabatan" class="form-control @error('jabatan') is-invalid @enderror"
@@ -89,11 +79,39 @@
                         @enderror
                     </div>
                     <div class="mb-3">
+                        <label for="jabatan_fraksi" class="form-label">Jabatan Sebagai Fraksi</label>
+                        <input type="text" name="jabatan_fraksi"
+                            class="form-control @error('jabatan_fraksi') is-invalid @enderror" id="jabatan_fraksi"
+                            aria-describedby="name"
+                            value="{{old('jabatan_fraksi') ? old('jabatan_fraksi') : $anggota->jabatan_fraksi}}">
+                        @error('jabatan_fraksi')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
                         <label for="periode" class="form-label">Periode</label>
                         <input type="text" name="periode" class="form-control @error('periode') is-invalid @enderror"
                             id="periode" aria-describedby="name"
                             value="{{old('pendidikan') ? old('pendidikan') : $anggota->pendidikan}}">
                         @error('periode')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <select name="fraksi_id" class="form-select @error('fraksi_id') is-invalid @enderror"
+                            aria-label="Default select example">
+                            @foreach ($fraksi as $fraks)
+                            <option @if (old('fraksi_id')==$fraks->id || $anggota->fraksi->id == $fraks->id) selected
+                                @endif
+                                value="{{$fraks->id}}">{{$fraks->nama}}</option>
+
+                            @endforeach
+                        </select>
+                        @error('fraksi_id')
                         <div class="invalid-feedback">
                             {{$message}}
                         </div>
