@@ -61,7 +61,7 @@
                     <a href="{{route('kedudukan')}}" class="dropdown-item mt-3">Tugas, Pokok, dan Fungsi</a>
                     <a href="{{route('pimpinan')}}" class="dropdown-item mt-3">Visi Misi</a>
                     <a href="{{route('all')}}" class="dropdown-item mt-3">Struktur Organisasi</a>
-                    <a href="{{route('tataTertib')}}" class="dropdown-item mt-3">Pejabat Struktural</a>
+                    <a href="{{route('anggotaSekretariat')}}" class="dropdown-item mt-3">Pejabat Struktural</a>
                 </div>
             </div>
             <div class="nav-item dropdown">

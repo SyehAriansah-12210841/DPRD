@@ -4,6 +4,7 @@ use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\DapilController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FraksiController;
+use App\Http\Controllers\SekretariatController;
 use App\Http\Controllers\VisitorAnggotaController;
 use App\Http\Controllers\VisitorHomeController;
 use Illuminate\Support\Facades\Route;
@@ -40,10 +41,15 @@ Route::prefix('/akd')->group(function () {
 Route::prefix('/fraksi')->group(function () {
     Route::get('/{fraksi:slug}', [VisitorHomeController::class, 'fraksiDetail'])->name('fraksiDetail');
 });
+Route::prefix('/sekretariat')->group(function () {
+    Route::get('/{id}', [VisitorHomeController::class, 'sekretariatDetail'])->name('sekretariatDetail');
+    Route::get('/', [VisitorHomeController::class, 'anggotaSekretariat'])->name('anggotaSekretariat');
+});
 // Admin Dashboard
 Route::prefix('/admin')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('anggota', AnggotaController::class)->parameter('anggota', 'anggota');
     Route::resource('dapil', DapilController::class);
     Route::resource('fraksi', FraksiController::class);
+    Route::resource('sekretariat', SekretariatController::class)->parameter('sekretariat', 'sekretariat');
 });

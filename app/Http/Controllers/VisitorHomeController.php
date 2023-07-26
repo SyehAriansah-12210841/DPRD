@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Anggota;
+use App\Models\Sekretariat;
 use App\Models\Fraksi;
 
 class VisitorHomeController extends Controller
@@ -59,5 +60,17 @@ class VisitorHomeController extends Controller
         $ketua = $fraksi->anggota()->where('jabatan_fraksi', 'like', '%ketua%')->first();
         $subAnggota = $fraksi->anggota()->where('jabatan_fraksi', 'like', '%wakil%')->orWhere('jabatan_fraksi', 'like', '%sekretaris%')->orWhere('jabatan_fraksi', 'like', '%bendahara%')->get();
         return view('visitor.fraksiDetail', compact('fraksi', 'jabatAnggota', 'subAnggota', 'ketua'));
+    }
+
+    public function anggotaSekretariat()
+    {
+        $sekretaris = Sekretariat::where('jabatan', 'like', '%sekretaris%')->first();
+        $subAnggota = Sekretariat::where('jabatan', 'not like', '%sekretaris%')->get();
+        return view('visitor.anggotaSekretariat', compact('subAnggota', 'sekretaris'));
+    }
+    public function sekretariatDetail($id)
+    {
+        $sekretariat = Sekretariat::find($id);
+        return view('visitor.sekretariatDetail', compact('sekretariat'));
     }
 }
