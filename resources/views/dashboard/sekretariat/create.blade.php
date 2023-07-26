@@ -9,7 +9,7 @@
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 ">
             <h2 class="mt-2 text-center">Tambah Anggota Baru</h2>
             <div class="p-2 mx-auto" style="max-width: 46rem">
-                <form method="POST" action="{{route('anggota.store')}}" enctype="multipart/form-data">
+                <form method="POST" action="{{route('sekretariat.store')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>
@@ -69,60 +69,6 @@
                         <input type="text" name="jabatan" class="form-control @error('jabatan') is-invalid @enderror"
                             id="jabatan" aria-describedby="name" value="{{old('jabatan')}}">
                         @error('jabatan')
-                        <div class="invalid-feedback">
-                            {{$message}}
-                        </div>
-                        @enderror
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="periode" class="form-label">Periode</label>
-                        <input type="text" name="periode" class="form-control @error('periode') is-invalid @enderror"
-                            id="periode" aria-describedby="name" value="{{old('pendidikan')}}">
-                        @error('periode')
-                        <div class="invalid-feedback">
-                            {{$message}}
-                        </div>
-                        @enderror
-                    </div>
-                    <div class="mb-3">
-                        <label for="jabatan_fraksi" class="form-label">Jabatan Sebagai Fraksi</label>
-                        <input type="text" name="jabatan_fraksi"
-                            class="form-control @error('jabatan_fraksi') is-invalid @enderror" id="jabatan_fraksi"
-                            aria-describedby="name" value="{{old('jabatan_fraksi')}}">
-                        @error('jabatan_fraksi')
-                        <div class="invalid-feedback">
-                            {{$message}}
-                        </div>
-                        @enderror
-                    </div>
-                    <div class="mb-3">
-                        <select name="fraksi_id" class="form-select @error('fraksi_id') is-invalid @enderror"
-                            aria-label="Default select example">
-                            <option selected>Fraksi</option>
-                            @foreach ($fraksi as $fraks)
-                            <option @if (old('fraksi_id')==$fraks->id) selected @endif
-                                value="{{$fraks->id}}">{{$fraks->nama}}</option>
-
-                            @endforeach
-                        </select>
-                        @error('fraksi_id')
-                        <div class="invalid-feedback">
-                            {{$message}}
-                        </div>
-                        @enderror
-                    </div>
-                    <div class="mb-3">
-                        <select name="dapil_id" class="form-select @error('dapil_id') is-invalid @enderror"
-                            aria-label="Default select example">
-                            <option selected>Daerah Pilihan</option>
-                            @foreach ($data as $dapil)
-                            <option @if (old('dapil_id')==$dapil->id) selected @endif
-                                value="{{$dapil->id}}">{{$dapil->nama}}</option>
-
-                            @endforeach
-                        </select>
-                        @error('dapil_id')
                         <div class="invalid-feedback">
                             {{$message}}
                         </div>

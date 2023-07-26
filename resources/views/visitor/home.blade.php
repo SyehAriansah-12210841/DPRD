@@ -1,5 +1,5 @@
 @extends('template.base')
-@section('title', 'Beranda')
+@section('title', 'Dewan Perwakilan Rakyat Daerah Kapuas Hulu')
 @section('content')
 <x-carousel />
 
@@ -16,16 +16,16 @@
                 {{-- ketua --}}
                 @if ($ketua)
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 pt-5 mx-auto wow fadeInUp">
+                    <div class="col-8 col-lg-3 col-md-6 pt-5 mx-auto wow fadeInUp">
                         <a href="/profil/{{$ketua->id}}">
-                            <div class="card service-item d-flex h-100">
+                            <div class="card service-item border-0 d-flex h-100">
                                 <div class="overflow-hidden" style="max-height: 250px">
                                     <img src="/storage/{{$ketua->gambar}}" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title text-center">{{$ketua->nama}}</h5>
                                     <p class="card-text text-center fw-bold">
-                                        {{$ketua->jabatan}} DPRD kapuas Hulu</p>
+                                        {{$ketua->jabatan}} DPRD Kapuas Hulu</p>
                                 </div>
                             </div>
                         </a>
@@ -34,19 +34,21 @@
                 @endif
 
                 {{-- wakil ketua --}}
-                <div class="row gy-5 gx-4">
+                <div class="row gy-2 gx-2">
                     @forelse ($wakil as $anggota)
-                    <div class="col-lg-3 col-md-6 pt-5 mx-auto wow fadeInUp">
+                    <div class=" col-6 col-lg-3 col-md-6 pt-3 mx-auto wow fadeInUp">
                         <a href="/profil/{{$anggota->id}}">
-                            <div class="card service-item d-flex h-100">
+                            <div class="card service-item border-0 d-flex h-100">
                                 <div class="overflow-hidden" style="max-height: 250px">
                                     <img src="/storage/{{$anggota->gambar}}" class="card-img-top" alt="...">
                                 </div>
 
-                                <div class="card-body">
+                                <div class="card-body d-flex flex-column">
                                     <h5 class="card-title text-center">{{$anggota->nama}}</h5>
-                                    <p class="card-text text-center">
-                                        {{$anggota->jabatan}} DPRD Kapuas Hulu</p>
+                                    <div class="mt-auto">
+                                        <p class="card-text text-center">
+                                            {{$anggota->jabatan}} DPRD Kapuas Hulu</p>
+                                    </div>
                                 </div>
                             </div>
                         </a>

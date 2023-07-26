@@ -1,5 +1,5 @@
 @extends('template.base-dashboard')
-@section('title', 'Dashboard')
+@section('title', 'Dasbor Fraksi')
 @section('content')
 <x-dashboard-icon />
 <x-dashboard-topbar />
@@ -17,8 +17,8 @@
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div
                 class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Anggota Terdaftar</h1>
-                <a class="btn btn-outline-success" href="{{route('anggota.create')}}">Tambah</a>
+                <h1 class="h2">Fraksi</h1>
+                <a class="btn btn-outline-success" href="{{route('fraksi.create')}}">Tambah</a>
             </div>
 
 
@@ -28,35 +28,27 @@
                         <tr>
                             <th scope="col">No</th>
                             <th scope="col">Nama</th>
-                            <th scope="col">Jabatan</th>
-                            <th scope="col">Dapil</th>
-                            <th scope="col">Fraksi</th>
-                            <th scope="col">Jabatan Fraksi</th>
+                            <th scope="col">Slug URL</th>
+                            <th scope="col">Jumlah Anggota</th>
                             <th scope="col">Aksi</th>
 
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($data as $key => $anggota)
+                        @foreach ($data as $key => $fraksi)
                         <tr>
                             <td> {{ ($data->currentpage()-1) * $data->perpage() + $key + 1 }} </td>
-                            <td>{{$anggota->nama}}</td>
-                            <td>{{$anggota->jabatan}}</td>
-                            <td>{{$anggota->dapil->nama}}</td>
-                            <td>{{$anggota->fraksi->nama}}</td>
-                            <td>{{$anggota->jabatan_fraksi}}</td>
-
-
+                            <td>{{$fraksi->nama}}</td>
+                            <td>{{$fraksi->slug}}</td>
+                            <td>{{$fraksi->anggota->count()}}</td>
                             <td>
-                                <a class="badge bg-primary text-decoration-none"
-                                    href="{{route('anggota.show', ['anggota' => $anggota->id])}}">Detail</a>
                                 <a class="badge bg-success text-decoration-none"
-                                    href="{{route('anggota.edit', ['anggota' => $anggota->id])}}">Edit</a>
-                                <form class="d-inline"
-                                    action="{{route('anggota.destroy', ['anggota' => $anggota->id])}}" method="post">
+                                    href="{{route('fraksi.edit', ['fraksi' => $fraksi->id])}}">Edit</a>
+                                <form class="d-inline" action="{{route('fraksi.destroy', ['fraksi' => $fraksi->id])}}"
+                                    method="post">
                                     @method('delete')
                                     @csrf
-                                    <button class="badge bg-danger" type="submit">Hapus</button>
+                                    <button class="badge bg-danger disable" type="submit">Hapus</button>
                                 </form>
                             </td>
                         </tr>
@@ -66,7 +58,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="d-flex justify-content-center w-100 ">
+            <div class="d-flex justify-content-center w-100 border">
                 {{ $data->links() }}
             </div>
         </main>

@@ -6,8 +6,9 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Beranda</a></li>
             <li class="breadcrumb-item"><a href="/profil/anggota">Anggota</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><span class="{{(request()->is('profil/*')) ? 'text-secondary' : ''}}">Profil</span></li>
-            
+            <li class="breadcrumb-item active" aria-current="page"><span
+                    class="{{(request()->is('profil/*')) ? 'text-secondary' : ''}}">Profil</span></li>
+
 
         </ol>
     </nav>
@@ -32,7 +33,7 @@
             <p class="fs-4 fw-bold">Pendidikan</p>
             <p class="fs-5">{{$anggota->pendidikan}}</p>
             <p class="fs-4 fw-bold">Fraksi</p>
-            <p class="fs-5">{{$anggota->fraksi}}</p>
+            <p class="fs-5">{{$anggota->fraksi->nama}}</p>
 
 
         </div>

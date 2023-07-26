@@ -11,7 +11,6 @@
             <div
                 class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Detail Anggota</h1>
-                <a class="btn btn-outline-success" href="/admin/anggota/create">Tambah</a>
             </div>
             <div class="row gy-2">
 
@@ -35,7 +34,7 @@
                     <p class="fs-4 fw-bold">Pendidikan</p>
                     <p class="fs-5">{{$anggota->pendidikan}}</p>
                     <p class="fs-4 fw-bold">Fraksi</p>
-                    <p class="fs-5">{{$anggota->fraksi}}</p>
+                    <p class="fs-5">{{$anggota->fraksi->nama}}</p>
 
 
                 </div>

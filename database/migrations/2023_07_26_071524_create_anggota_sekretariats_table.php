@@ -11,10 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('dapil', function (Blueprint $table) {
+        Schema::create('anggota_sekretariat', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('daerah');
+            $table->string('jabatan');
+            $table->string('tempat_lahir');
+            $table->date('tanggal_lahir');
+            $table->string('alamat');
+            $table->string('pendidikan');
+            $table->string('gambar');
             $table->timestamps();
         });
     }
@@ -24,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('dapil');
+        Schema::dropIfExists('anggota_sekretariat');
     }
 };

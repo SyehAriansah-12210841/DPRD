@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreAnggotaRequest extends FormRequest
+class UpdateAnggotaSekretariatRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,15 +24,11 @@ class StoreAnggotaRequest extends FormRequest
         return [
             'nama' => 'required|string',
             'tempat_lahir' => 'required|string',
-            'tanggal_lahir' => 'required|date',
+            'tanggal_lahir' => 'required|string',
             'alamat' => 'required|string',
             'pendidikan' => 'required|string',
-            'fraksi_id' => 'required|string',
             'jabatan' => 'required|string',
-            'jabatan_fraksi' => 'required|string',
-            'periode' => 'required|string',
-            'dapil_id' => 'required|string',
-            'gambar' => 'required|image'
+            'gambar' => 'required'
         ];
     }
 }
