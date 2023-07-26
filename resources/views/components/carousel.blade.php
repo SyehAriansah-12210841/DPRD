@@ -9,7 +9,8 @@
                         <div class="row justify-content-start">
                             <div class="col-lg-8 text-start">
                                 <p class="fs-4 text-white">Selamat Datang di Website Resmi</p>
-                                <h1 class="display-1 text-white mb-5 animated slideInRight">Dewan Perwakilan Rakyat
+                                <h1 class="display-1 text-white mb-5 animated slideInRight">Dewan
+                                    Perwakilan Rakyat
                                     Daerah Kapuas Hulu
                                 </h1>
                                 <a href="#"
