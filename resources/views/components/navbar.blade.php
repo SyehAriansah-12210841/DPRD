@@ -31,10 +31,10 @@
                     data-bs-toggle="dropdown">AKD</a>
                 <div class="dropdown-menu bg-light m-0">
                     <a href="{{route('komisi')}}" class="dropdown-item">Komisi</a>
-                    <a href="{{route('BadanMusyawarah')}}" class="dropdown-item mt-3">Badan Musyawarah</a>
-                    <a href="{{route('BadanAnggaran')}}" class="dropdown-item mt-3">Badan Anggaran</a>
-                    <a href="{{route('BadanPembentukanPerda')}}" class="dropdown-item mt-3">Badan Pembentukan Perda</a>
-                    <a href="{{route('BadanKehormatan')}}" class="dropdown-item mt-3">Badan Kehormatan</a>
+                    <a href="{{route('badanMusyawarah')}}" class="dropdown-item mt-3">Badan Musyawarah</a>
+                    <a href="{{route('badanAnggaran')}}" class="dropdown-item mt-3">Badan Anggaran</a>
+                    <a href="{{route('badanPembentukanPerda')}}" class="dropdown-item mt-3">Badan Pembentukan Perda</a>
+                    <a href="{{route('badanKehormatan')}}" class="dropdown-item mt-3">Badan Kehormatan</a>
                 </div>
             </div>
             <div class="nav-item dropdown">
@@ -57,10 +57,11 @@
                 <a href="#" class="nav-link dropdown-toggle {{(request()->is('profil/*')) ? 'text-secondar' : ''}}"
                     data-bs-toggle="dropdown">Sekretariat</a>
                 <div class="dropdown-menu bg-light m-0">
-                    <a href="{{route('sejarah')}}" class="dropdown-item">Sejarah Lembaga</a>
-                    <a href="{{route('kedudukan')}}" class="dropdown-item mt-3">Tugas, Pokok, dan Fungsi</a>
-                    <a href="{{route('pimpinan')}}" class="dropdown-item mt-3">Visi Misi</a>
-                    <a href="{{route('all')}}" class="dropdown-item mt-3">Struktur Organisasi</a>
+                    <a href="{{route('sejarahSekretariat')}}" class="dropdown-item">Sejarah Lembaga</a>
+                    <a href="{{route('tupoksiSekretariat')}}" class="dropdown-item mt-3">Tugas, Pokok, dan Fungsi</a>
+                    <a href="{{route('visimisiSekretariat')}}" class="dropdown-item mt-3">Visi Misi</a>
+                    <a href="{{route('strukturOrganisasiSekretariat')}}" class="dropdown-item mt-3">Struktur
+                        Organisasi</a>
                     <a href="{{route('anggotaSekretariat')}}" class="dropdown-item mt-3">Pejabat Struktural</a>
                 </div>
             </div>

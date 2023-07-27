@@ -94,8 +94,65 @@
                         <label for="periode" class="form-label">Periode</label>
                         <input type="text" name="periode" class="form-control @error('periode') is-invalid @enderror"
                             id="periode" aria-describedby="name"
-                            value="{{old('pendidikan') ? old('pendidikan') : $anggota->pendidikan}}">
+                            value="{{old('periode') ? old('periode') : $anggota->periode}}">
                         @error('periode')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label for="badan_akd" class="form-label">Badan AKD</label>
+                        <input type="text" name="badan_akd"
+                            class="form-control tagg @error('badan_akd') is-invalid @enderror" id="badan_akd"
+                            aria-describedby="name"
+                            value="{{old('badan_akd') ? old('badan_akd') : $anggota->badan_akd}}">
+                        @error('badan_akd')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
+                    </div>
+                    <script>
+                        const input = document.querySelector('.tagg')
+                        new Tagify(input, {
+                         whitelist: ["Badan Musyawarah", "Badan Anggaran", "Badan Pembentukan Perda", "Badan Kehormatan"],
+                          dropdown: {
+                            position: "input",
+                        enabled : 0 // always opens dropdown when input gets focus
+                          }
+                        })
+                    </script>
+                    <div class="mb-3">
+                        <label for="jabatan_akd" class="form-label">Badan AKD</label>
+                        <input type="text" name="jabatan_akd"
+                            class="form-control @error('jabatan_akd') is-invalid @enderror" id="jabatan_akd"
+                            aria-describedby="name"
+                            value="{{old('jabatan_akd') ? old('jabatan_akd') : $anggota->jabatan_akd}}">
+                        @error('jabatan_akd')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label for="komisi" class="form-label">Komisi</label>
+                        <input type="text" name="komisi" class="form-control @error('komisi') is-invalid @enderror"
+                            id="komisi" aria-describedby="name"
+                            value="{{old('komisi') ? old('komisi') : $anggota->komisi}}">
+                        @error('komisi')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label for="jabatan_komisi" class="form-label">Jabatan Komisi</label>
+                        <input type="text" name="jabatan_komisi"
+                            class="form-control @error('jabatan_komisi') is-invalid @enderror" id="jabatan_komisi"
+                            aria-describedby="name"
+                            value="{{old('jabatan_komisi') ? old('jabatan_komisi') : $anggota->jabatan_komisi}}">
+                        @error('jabatan_komisi')
                         <div class="invalid-feedback">
                             {{$message}}
                         </div>

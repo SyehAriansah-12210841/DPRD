@@ -32,7 +32,11 @@ class StoreAnggotaRequest extends FormRequest
             'jabatan_fraksi' => 'required|string',
             'periode' => 'required|string',
             'dapil_id' => 'required|string',
-            'gambar' => 'required|image'
+            'gambar' => 'required|image',
+            'badan_akd' => 'string',
+            'jabatan_akd' => 'string',
+            'komisi' => 'required|string',
+            'jabatan_komisi' => 'required|string'
         ];
     }
 }

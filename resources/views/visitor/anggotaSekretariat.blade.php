@@ -6,7 +6,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('home')}}">Beranda</a></li>
             <li class="breadcrumb-item"><a class="{{(request()->is('sekretariat')) ? 'text-secondary' : ''}}"
-                    href="{{route('all')}}">Sekretariat</a></li>
+                    href="{{route('anggotaSekretariat')}}">Sekretariat</a></li>
         </ol>
     </nav>
 </div>
@@ -32,7 +32,7 @@
     @endif
 
 
-    <div class="row mt-5 g-1 justify-content-center">
+    <div class="row mt-5 gx-2 justify-content-center">
         @forelse ($subAnggota as $anggota)
         <div class="col-6 col-sm-6 col-md-4 col-lg-3">
             <a href="/sekretariat/{{$anggota->id}}">

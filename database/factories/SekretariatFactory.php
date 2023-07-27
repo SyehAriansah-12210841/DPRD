@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\AnggotaSekretariat>
  */
-class AnggotaSekretariatFactory extends Factory
+class SekretariatFactory extends Factory
 {
     /**
      * Define the model's default state.

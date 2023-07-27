@@ -38,8 +38,6 @@ class FraksiController extends Controller
         return redirect('/admin/fraksi')->with('status', 'Data berhasil ditambah');
     }
 
-
-
     /**
      * Show the form for editing the specified resource.
      */
