@@ -33,10 +33,11 @@ Route::prefix('/profil')->group(function () {
 
 Route::prefix('/akd')->group(function () {
     Route::get('/komisi', [VisitorHomeController::class, 'komisi'])->name('komisi');
-    Route::get('/Badan-Musyawarah', [VisitorHomeController::class, 'BadanMusyawarah'])->name('BadanMusyawarah');
-    Route::get('/Badan-Anggaran', [VisitorHomeController::class, 'BadanAnggaran'])->name('BadanAnggaran');
-    Route::get('/Badan-Pembentukan-Perda', [VisitorHomeController::class, 'BadanPembentukanPerda'])->name('BadanPembentukanPerda');
-    Route::get('/Badan-Kehormatan', [VisitorHomeController::class, 'BadanKehormatan'])->name('BadanKehormatan');
+    Route::get('/komisi/{komisi:id}', [VisitorHomeController::class, 'komisiDetail'])->name('komisiDetail');
+    Route::get('/badan-musyawarah', [VisitorHomeController::class, 'badanMusyawarah'])->name('badanMusyawarah');
+    Route::get('/badan-anggaran', [VisitorHomeController::class, 'badanAnggaran'])->name('badanAnggaran');
+    Route::get('/badan-pembentukan-perda', [VisitorHomeController::class, 'badanPembentukanPerda'])->name('badanPembentukanPerda');
+    Route::get('/badan-kehormatan', [VisitorHomeController::class, 'badanKehormatan'])->name('badanKehormatan');
 });
 Route::prefix('/fraksi')->group(function () {
     Route::get('/{fraksi:slug}', [VisitorHomeController::class, 'fraksiDetail'])->name('fraksiDetail');

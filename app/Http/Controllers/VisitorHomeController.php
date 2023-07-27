@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Anggota;
 use App\Models\Sekretariat;
 use App\Models\Fraksi;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 
 class VisitorHomeController extends Controller
 {
@@ -12,7 +13,6 @@ class VisitorHomeController extends Controller
     {
         $ketua = Anggota::where('jabatan', 'like', '%ketua%')->first();
         $wakil = Anggota::where('jabatan', 'like', '%wakil%')->get();
-
         return view('visitor.home', compact('ketua', 'wakil'));
     }
 
@@ -38,21 +38,45 @@ class VisitorHomeController extends Controller
     {
         return view('visitor.komisi');
     }
-    public function BadanMusyawarah()
+    public function badanMusyawarah()
     {
-        return view('visitor.BadanMusyawarah');
+        $title = 'Badan Musyawarah';
+        $jabatAnggota = Anggota::where('badan_akd', 'like', '%musyawarah%')->where('jabatan_akd', 'like', '%anggota%')->get();
+        $ketua = Anggota::where('badan_akd', 'like', '%musyawarah%')->where('jabatan_akd', 'like', '%ketua%')->first();
+        $subAnggota = Anggota::where('badan_akd', 'like', '%musyawarah%')->where(function (Builder $query) {
+            $query->where('jabatan_akd', 'like', '%sekretaris%')->orWhere('jabatan_akd', 'like', '%bendahara%')->orWhere('jabatan_akd', 'like', '%wakil%');
+        })->get();
+        return view('visitor.akd', compact('jabatAnggota', 'subAnggota', 'ketua', 'title'));
     }
-    public function BadanAnggaran()
+    public function badanAnggaran()
     {
-        return view('visitor.BadanAnggaran');
+        $title = 'Badan Anggaran';
+        $jabatAnggota = Anggota::where('badan_akd', 'like', '%anggaran%')->where('jabatan_akd', 'like', '%anggota%')->get();
+        $ketua = Anggota::where('badan_akd', 'like', '%anggaran%')->where('jabatan_akd', 'like', '%ketua%')->first();
+        $subAnggota = Anggota::where('badan_akd', 'like', '%anggaran%')->where(function (Builder $query) {
+            $query->where('jabatan_akd', 'like', '%sekretaris%')->orWhere('jabatan_akd', 'like', '%bendahara%')->orWhere('jabatan_akd', 'like', '%wakil%');
+        })->get();
+        return view('visitor.akd', compact('jabatAnggota', 'subAnggota', 'ketua', 'title'));
     }
-    public function BadanPembentukanPerda()
+    public function badanPembentukanPerda()
     {
-        return view('visitor.BadanPembentukanPerda');
+        $title = 'Badan Pembentukan Perda';
+        $jabatAnggota = Anggota::where('badan_akd', 'like', '%pembentukan perda%')->where('jabatan_akd', 'like', '%anggota%')->get();
+        $ketua = Anggota::where('badan_akd', 'like', '%pembentukan perda%')->where('jabatan_akd', 'like', '%ketua%')->first();
+        $subAnggota = Anggota::where('badan_akd', 'like', '%pembentukan perda%')->where(function (Builder $query) {
+            $query->where('jabatan_akd', 'like', '%sekretaris%')->orWhere('jabatan_akd', 'like', '%bendahara%')->orWhere('jabatan_akd', 'like', '%wakil%');
+        })->get();
+        return view('visitor.akd', compact('jabatAnggota', 'subAnggota', 'ketua', 'title'));
     }
-    public function BadanKehormatan()
+    public function badanKehormatan()
     {
-        return view('visitor.BadanKehormatan');
+        $title = 'Badan Kehormatan';
+        $jabatAnggota = Anggota::where('badan_akd', 'like', '%kehormatan%')->where('jabatan_akd', 'like', '%anggota%')->get();
+        $ketua = Anggota::where('badan_akd', 'like', '%kehormatan%')->where('jabatan_akd', 'like', '%ketua%')->first();
+        $subAnggota = Anggota::where('badan_akd', 'like', '%kehormatan%')->where(function (Builder $query) {
+            $query->where('jabatan_akd', 'like', '%sekretaris%')->orWhere('jabatan_akd', 'like', '%bendahara%')->orWhere('jabatan_akd', 'like', '%wakil%');
+        })->get();
+        return view('visitor.akd', compact('jabatAnggota', 'subAnggota', 'ketua', 'title'));
     }
     public function fraksiDetail(Fraksi $fraksi)
     {

@@ -31,10 +31,10 @@
                     data-bs-toggle="dropdown">AKD</a>
                 <div class="dropdown-menu bg-light m-0">
                     <a href="{{route('komisi')}}" class="dropdown-item">Komisi</a>
-                    <a href="{{route('BadanMusyawarah')}}" class="dropdown-item mt-3">Badan Musyawarah</a>
-                    <a href="{{route('BadanAnggaran')}}" class="dropdown-item mt-3">Badan Anggaran</a>
-                    <a href="{{route('BadanPembentukanPerda')}}" class="dropdown-item mt-3">Badan Pembentukan Perda</a>
-                    <a href="{{route('BadanKehormatan')}}" class="dropdown-item mt-3">Badan Kehormatan</a>
+                    <a href="{{route('badanMusyawarah')}}" class="dropdown-item mt-3">Badan Musyawarah</a>
+                    <a href="{{route('badanAnggaran')}}" class="dropdown-item mt-3">Badan Anggaran</a>
+                    <a href="{{route('badanPembentukanPerda')}}" class="dropdown-item mt-3">Badan Pembentukan Perda</a>
+                    <a href="{{route('badanKehormatan')}}" class="dropdown-item mt-3">Badan Kehormatan</a>
                 </div>
             </div>
             <div class="nav-item dropdown">

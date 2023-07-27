@@ -83,10 +83,13 @@
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
     <link href="{{asset('/css/dashboard.css')}}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
 
 </head>
 
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
     <script src="{{asset('/js/bootstrap.bundle.min.js')}}"></script>
     @yield('content')
 </body>

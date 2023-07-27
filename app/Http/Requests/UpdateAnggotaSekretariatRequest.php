@@ -28,7 +28,7 @@ class UpdateAnggotaSekretariatRequest extends FormRequest
             'alamat' => 'required|string',
             'pendidikan' => 'required|string',
             'jabatan' => 'required|string',
-            'gambar' => 'required'
+            'gambar' => 'image'
         ];
     }
 }

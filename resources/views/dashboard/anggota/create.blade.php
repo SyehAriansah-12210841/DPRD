@@ -67,7 +67,8 @@
                     <div class="mb-3">
                         <label for="jabatan" class="form-label">Jabatan</label>
                         <input type="text" name="jabatan" class="form-control @error('jabatan') is-invalid @enderror"
-                            id="jabatan" aria-describedby="name" value="{{old('jabatan')}}">
+                            id="jabatan" aria-describedby="name" placeholder="cth: Ketua, Wakil, Anggota"
+                            value="{{old('jabatan')}}">
                         @error('jabatan')
                         <div class="invalid-feedback">
                             {{$message}}
@@ -89,7 +90,8 @@
                         <label for="jabatan_fraksi" class="form-label">Jabatan Sebagai Fraksi</label>
                         <input type="text" name="jabatan_fraksi"
                             class="form-control @error('jabatan_fraksi') is-invalid @enderror" id="jabatan_fraksi"
-                            aria-describedby="name" value="{{old('jabatan_fraksi')}}">
+                            aria-describedby="name" placeholder="cth: Ketua, Wakil, Anggota, Bendahara, Sekretaris"
+                            value="{{old('jabatan_fraksi')}}">
                         @error('jabatan_fraksi')
                         <div class="invalid-feedback">
                             {{$message}}
@@ -97,9 +99,45 @@
                         @enderror
                     </div>
                     <div class="mb-3">
+                        <label for="badan_akd" class="form-label">Badan AKD</label>
+                        <input type="text" name="badan_akd"
+                            class="form-control tagg @error('badan_akd') is-invalid @enderror" id="badan_akd"
+                            aria-describedby="name" value="{{old('badan_akd')}}"
+                            placeholder="Badan Musyawarah, Badan Anggaran, Badan Pembentukan Perda, Badan Kehormatan">
+                        @error('badan_akd')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
+                    </div>
+                    <script>
+                        const input = document.querySelector('.tagg')
+                        new Tagify(input, {
+                         whitelist: ["Badan Musyawarah", "Badan Anggaran", "Badan Pembentukan Perda", "Badan Kehormatan"],
+                          dropdown: {
+                            position: "input",
+                        enabled : 0 // always opens dropdown when input gets focus
+                          }
+                        })
+                    </script>
+                    <div class="mb-3">
+                        <label for="jabatan_akd" class="form-label">Jabatan AKD</label>
+                        <input type="text" name="jabatan_akd"
+                            class="form-control @error('jabatan_akd') is-invalid @enderror" id="jabatan_akd"
+                            aria-describedby="name" value="{{old('jabatan_akd')}}"
+                            placeholder="cth: Ketua, Wakil, Sekretaris, Anggota">
+                        @error('jabatan_akd')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label for="fraksi_id" class="form-label">Fraksi</label>
                         <select name="fraksi_id" class="form-select @error('fraksi_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            <option selected>Fraksi</option>
+                            <option></option>
+
                             @foreach ($fraksi as $fraks)
                             <option @if (old('fraksi_id')==$fraks->id) selected @endif
                                 value="{{$fraks->id}}">{{$fraks->nama}}</option>
@@ -113,9 +151,10 @@
                         @enderror
                     </div>
                     <div class="mb-3">
+                        <label for="dapil_id" class="form-label">Daerah Pilihan</label>
                         <select name="dapil_id" class="form-select @error('dapil_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            <option selected>Daerah Pilihan</option>
+                            <option></option>
                             @foreach ($data as $dapil)
                             <option @if (old('dapil_id')==$dapil->id) selected @endif
                                 value="{{$dapil->id}}">{{$dapil->nama}}</option>
