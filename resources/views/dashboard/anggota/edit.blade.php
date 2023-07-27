@@ -136,6 +136,29 @@
                         @enderror
                     </div>
                     <div class="mb-3">
+                        <label for="komisi" class="form-label">Komisi</label>
+                        <input type="text" name="komisi" class="form-control @error('komisi') is-invalid @enderror"
+                            id="komisi" aria-describedby="name"
+                            value="{{old('komisi') ? old('komisi') : $anggota->komisi}}">
+                        @error('komisi')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label for="jabatan_komisi" class="form-label">Jabatan Komisi</label>
+                        <input type="text" name="jabatan_komisi"
+                            class="form-control @error('jabatan_komisi') is-invalid @enderror" id="jabatan_komisi"
+                            aria-describedby="name"
+                            value="{{old('jabatan_komisi') ? old('jabatan_komisi') : $anggota->jabatan_komisi}}">
+                        @error('jabatan_komisi')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
                         <select name="fraksi_id" class="form-select @error('fraksi_id') is-invalid @enderror"
                             aria-label="Default select example">
                             @foreach ($fraksi as $fraks)

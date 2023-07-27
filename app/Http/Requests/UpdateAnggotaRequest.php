@@ -34,7 +34,9 @@ class UpdateAnggotaRequest extends FormRequest
             'dapil_id' => 'required|string',
             'gambar' => 'image',
             'badan_akd' => 'nullable|string',
-            'jabatan_akd' => 'nullable|string'
+            'jabatan_akd' => 'nullable|string',
+            'komisi' => 'required|string',
+            'jabatan_komisi' => 'required|string'
         ];
     }
 }

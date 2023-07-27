@@ -34,7 +34,9 @@ class StoreAnggotaRequest extends FormRequest
             'dapil_id' => 'required|string',
             'gambar' => 'required|image',
             'badan_akd' => 'string',
-            'jabatan_akd' => 'string'
+            'jabatan_akd' => 'string',
+            'komisi' => 'required|string',
+            'jabatan_komisi' => 'required|string'
         ];
     }
 }

@@ -56,7 +56,7 @@
                         <label for="pendidikan" class="form-label">Pendidikan</label>
                         <input type="text" name="pendidikan"
                             class="form-control @error('pendidikan') is-invalid @enderror" id="pendidikan"
-                            aria-describedby="name" value="{{old('pendidikan')}}">
+                            aria-describedby="name" value="{{old('pendidikan')}}" placeholder="cth: Doktor, Sarjana">
                         @error('pendidikan')
                         <div class="invalid-feedback">
                             {{$message}}
@@ -79,7 +79,8 @@
                     <div class="mb-3">
                         <label for="periode" class="form-label">Periode</label>
                         <input type="text" name="periode" class="form-control @error('periode') is-invalid @enderror"
-                            id="periode" aria-describedby="name" value="{{old('pendidikan')}}">
+                            id="periode" aria-describedby="name" value="{{old('pendidikan')}}"
+                            placeholder="cth: 2023 - 2028">
                         @error('periode')
                         <div class="invalid-feedback">
                             {{$message}}
@@ -127,6 +128,29 @@
                             aria-describedby="name" value="{{old('jabatan_akd')}}"
                             placeholder="cth: Ketua, Wakil, Sekretaris, Anggota">
                         @error('jabatan_akd')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label for="komisi" class="form-label">Komisi</label>
+                        <input type="text" name="komisi" class="form-control @error('komisi') is-invalid @enderror"
+                            id="komisi" aria-describedby="name" value="{{old('komisi')}}"
+                            placeholder="cth: Komisi A, Komisi B">
+                        @error('komisi')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label for="jabatan_komisi" class="form-label">Jabatan Komisi</label>
+                        <input type="text" name="jabatan_komisi"
+                            class="form-control @error('jabatan_komisi') is-invalid @enderror" id="jabatan_komisi"
+                            aria-describedby="name" value="{{old('jabatan_komisi')}}"
+                            placeholder="cth: Ketua, Wakil, Sekretaris, Anggota">
+                        @error('jabatan_komisi')
                         <div class="invalid-feedback">
                             {{$message}}
                         </div>

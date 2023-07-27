@@ -28,6 +28,8 @@ return new class extends Migration
             $table->string('gambar');
             $table->string('badan_akd')->nullable();
             $table->string('jabatan_akd')->nullable();
+            $table->string('komisi')->nullable();
+            $table->string('jabatan_komisi')->nullable();
             $table->timestamps();
         });
     }

@@ -57,10 +57,11 @@
                 <a href="#" class="nav-link dropdown-toggle {{(request()->is('profil/*')) ? 'text-secondar' : ''}}"
                     data-bs-toggle="dropdown">Sekretariat</a>
                 <div class="dropdown-menu bg-light m-0">
-                    <a href="{{route('sejarah')}}" class="dropdown-item">Sejarah Lembaga</a>
-                    <a href="{{route('kedudukan')}}" class="dropdown-item mt-3">Tugas, Pokok, dan Fungsi</a>
-                    <a href="{{route('pimpinan')}}" class="dropdown-item mt-3">Visi Misi</a>
-                    <a href="{{route('all')}}" class="dropdown-item mt-3">Struktur Organisasi</a>
+                    <a href="{{route('sejarahSekretariat')}}" class="dropdown-item">Sejarah Lembaga</a>
+                    <a href="{{route('tupoksiSekretariat')}}" class="dropdown-item mt-3">Tugas, Pokok, dan Fungsi</a>
+                    <a href="{{route('visimisiSekretariat')}}" class="dropdown-item mt-3">Visi Misi</a>
+                    <a href="{{route('strukturOrganisasiSekretariat')}}" class="dropdown-item mt-3">Struktur
+                        Organisasi</a>
                     <a href="{{route('anggotaSekretariat')}}" class="dropdown-item mt-3">Pejabat Struktural</a>
                 </div>
             </div>

@@ -6,37 +6,41 @@ use App\Models\Anggota;
 use App\Models\Sekretariat;
 use App\Models\Fraksi;
 use Illuminate\Contracts\Database\Eloquent\Builder;
+use Illuminate\Support\Str;
 
-class VisitorHomeController extends Controller
+class VisitorController extends Controller
 {
+    // Halaman Statis
+    public function sejarah()
+    {
+        return view('visitor.static.sejarah');
+    }
+    public function kedudukan()
+    {
+        return view('visitor.static.kedudukan');
+    }
+
+    public function tataTertib()
+    {
+        return view('visitor.static.tataTertib');
+    }
+    public function komisi()
+    {
+        return view('visitor.static.komisi');
+    }
+
+    // Halaman Dinamis
     public function home()
     {
         $ketua = Anggota::where('jabatan', 'like', '%ketua%')->first();
         $wakil = Anggota::where('jabatan', 'like', '%wakil%')->get();
         return view('visitor.home', compact('ketua', 'wakil'));
     }
-
-    public function sejarah()
-    {
-        return view('visitor.sejarah');
-    }
-    public function kedudukan()
-    {
-        return view('visitor.kedudukan');
-    }
     public function pimpinan()
     {
         $ketua = Anggota::where('jabatan', 'like', '%ketua%')->first();
         $wakil = Anggota::where('jabatan', 'like', '%wakil%')->get();
         return view('visitor.pimpinan', compact('ketua', 'wakil'));
-    }
-    public function tataTertib()
-    {
-        return view('visitor.tataTertib');
-    }
-    public function komisi()
-    {
-        return view('visitor.komisi');
     }
     public function badanMusyawarah()
     {
@@ -96,5 +100,14 @@ class VisitorHomeController extends Controller
     {
         $sekretariat = Sekretariat::find($id);
         return view('visitor.sekretariatDetail', compact('sekretariat'));
+    }
+    public function komisiDetail($komisi)
+    {
+        $anggota = Anggota::where('komisi', 'like', '%' . Str::replace('-', ' ', $komisi) . '%')->where('jabatan_komisi', 'like', '%anggota%')->get();
+        $ketua = Anggota::where('komisi', 'like', '%' . Str::replace('-', ' ', $komisi) . '%')->where('jabatan_komisi', 'like', '%ketua%')->first();
+        $subAnggota = Anggota::where('komisi', 'like', '%' . Str::replace('-', ' ', $komisi) . '%')->where(function (Builder $query) {
+            $query->where('jabatan_komisi', 'like', '%sekretaris%')->orWhere('jabatan_komisi', 'like', '%wakil%');
+        })->get();
+        return view('visitor.komisiDetail', compact('anggota', 'ketua', 'subAnggota'));
     }
 }

@@ -39,7 +39,8 @@ class AnggotaFactory extends Factory
             'gambar' => $path,
             'badan_akd' => collect(['Badan Musyawarah', 'Badan Anggaran', 'Badan Pembentukan Perda', 'Badan Kehormatan'])->random(),
             // 'jabatan_akd' => 'Anggota'
-
+            'komisi' => collect(['Komisi A', 'Komisi B', 'Komisi C'])->random(),
+            'jabatan_komisi' => 'Anggota'
         ];
     }
 }
