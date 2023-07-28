@@ -19,7 +19,7 @@
                     <div class="col-8 col-lg-3 col-md-6 pt-5 mx-auto wow fadeInUp">
                         <a href="/profil/{{$ketua->id}}">
                             <div class="card service-item border-0 d-flex h-100">
-                                <div class="overflow-hidden" style="max-height: 250px">
+                                <div class="overflow-hidden">
                                     <img src="/storage/{{$ketua->gambar}}" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body">
@@ -39,7 +39,7 @@
                     <div class=" col-6 col-lg-3 col-md-6 pt-3 mx-auto wow fadeInUp">
                         <a href="/profil/{{$anggota->id}}">
                             <div class="card service-item border-0 d-flex h-100">
-                                <div class="overflow-hidden" style="max-height: 250px">
+                                <div class="overflow-hidden">
                                     <img src="/storage/{{$anggota->gambar}}" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body d-flex flex-column">
