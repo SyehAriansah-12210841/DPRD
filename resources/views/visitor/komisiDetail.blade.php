@@ -11,12 +11,12 @@
         </ol>
     </nav>
 </div>
-<div class="container my- ">
+<div class="container">
     @if (!empty($ketua))
-    <div class="row  justify-content-center">
+    <div class="row justify-content-center">
         <div class="col-8 col-sm-6 col-md-4 col-lg-3">
             <a href="/profil/{{$ketua->id}}">
-                <div class="card  d-flex border-0 " style="">
+                <div class="card  d-flex border-0">
                     <div class=" overflow-hidden" style="max-height: 400px">
                         <img src="/storage/{{$ketua->gambar}}" class="card-img-top rounded" alt="...">
                     </div>
@@ -32,12 +32,12 @@
     @endif
 
 
-    <div class="row  g-4 justify-content-center">
+    <div class="row g-4 justify-content-center">
         @forelse ($subAnggota as $a)
         <div class="col-6 col-sm-6 col-md-4 col-lg-3">
             <a href="/profil/{{$a->id}}">
-                <div class="card  border-0 " style="min-height: 330px">
-                    <div class=" overflow-hidden" style="max-heigh: 400px">
+                <div class="card border-0" style="min-height: 330px">
+                    <div class="overflow-hidden" style="max-heigh: 400px">
                         <img src="/storage/{{$a->gambar}}" class="card-img-top rounded" alt="...">
                     </div>
                     <div class="card-body d-flex flex-column">
@@ -58,12 +58,12 @@
     <div class="my-5 bg-warning rounded py-1 mx-auto" style="max-width: 16rem">
         <h2 class="text-center text-white fs-4">Anggota</h2>
     </div>
-    <div class="row  g-4 justify-content-center">
+    <div class="row g-4 justify-content-center">
         @forelse ($anggota as $anggot)
         <div class="col-6 col-sm-6 col-md-4 col-lg-3">
             <a href="/profil/{{$anggot->id}}">
-                <div class="card  border-0 " style="min-height: 330px">
-                    <div class=" overflow-hidden" style="max-heigh: 400px">
+                <div class="card border-0" style="min-height: 330px">
+                    <div class="overflow-hidden" style="max-heigh: 400px">
                         <img src="/storage/{{$anggot->gambar}}" class="card-img-top rounded" alt="...">
                     </div>
                     <div class="card-body d-flex flex-column">
@@ -74,11 +74,9 @@
                 </div>
             </a>
         </div>
-
         @empty
 
         @endforelse
     </div>
-
 </div>
 @endsection

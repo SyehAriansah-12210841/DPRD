@@ -60,7 +60,8 @@
                         <input type="text" name="pendidikan"
                             class="form-control @error('pendidikan') is-invalid @enderror" id="pendidikan"
                             aria-describedby="name"
-                            value="{{old('pendidikan') ? old('pendidikan') : $sekretariat->pendidikan}}">
+                            value="{{old('pendidikan') ? old('pendidikan') : $sekretariat->pendidikan}}"
+                            placeholder="cth: Doktor, Sarjana">
                         @error('pendidikan')
                         <div class="invalid-feedback">
                             {{$message}}
@@ -72,7 +73,8 @@
                         <label for="jabatan" class="form-label">Jabatan</label>
                         <input type="text" name="jabatan" class="form-control @error('jabatan') is-invalid @enderror"
                             id="jabatan" aria-describedby="name"
-                            value="{{old('jabatan') ? old('jabatan') : $sekretariat->jabatan}}">
+                            value="{{old('jabatan') ? old('jabatan') : $sekretariat->jabatan}}"
+                            placeholder="cth: Sekretaris, Pejabat Fungsional">
                         @error('jabatan')
                         <div class="invalid-feedback">
                             {{$message}}

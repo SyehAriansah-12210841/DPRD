@@ -42,7 +42,6 @@
                                 <div class="overflow-hidden" style="max-height: 250px">
                                     <img src="/storage/{{$anggota->gambar}}" class="card-img-top" alt="...">
                                 </div>
-
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title text-center">{{$anggota->nama}}</h5>
                                     <div class="mt-auto">
