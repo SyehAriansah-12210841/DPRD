@@ -10,15 +10,15 @@
         </ol>
     </nav>
 </div>
-<div class="container my- ">
+<div class="container">
     <h1 class="fs-3 mb-5">Pejabat Struktural</h1>
     @if (!empty($sekretaris))
-    <div class="row mb-5  justify-content-center">
+    <div class="row mb-5 justify-content-center">
         <div class="col-8 col-sm-6 col-md-4 col-lg-3">
             <a href="/sekretariat/{{$sekretaris->id}}">
-                <div class="card  d-flex border-0 " style="">
-                    <div class=" overflow-hidden" style="max-height: 400px">
-                        <img src="/storage/{{$sekretaris->gambar}}" class="card-img-top rounded" alt="...">
+                <div class="card d-flex border-0">
+                    <div class="overflow-hidden" style="max-height: 400px">
+                        <img src="/storage/{{$sekretaris->gambar}}" class="card-img-top rounded">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title text-center">{{$sekretaris->nama}}</h5>
@@ -30,15 +30,13 @@
         </div>
     </div>
     @endif
-
-
     <div class="row mt-5 gx-2 justify-content-center">
         @forelse ($subAnggota as $anggota)
         <div class="col-6 col-sm-6 col-md-4 col-lg-3">
             <a href="/sekretariat/{{$anggota->id}}">
-                <div class="card  border-0 " style="min-height: 330px">
-                    <div class=" overflow-hidden" style="max-heigh: 400px">
-                        <img src="/storage/{{$anggota->gambar}}" class="card-img-top rounded" alt="...">
+                <div class="card border-0" style="min-height: 330px">
+                    <div class="overflow-hidden">
+                        <img src="/storage/{{$anggota->gambar}}" class="card-img-top rounded">
                     </div>
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title text-center">{{$anggota->nama}}</h5>
@@ -50,12 +48,9 @@
                 </div>
             </a>
         </div>
-
         @empty
 
         @endforelse
     </div>
-
-
 </div>
 @endsection

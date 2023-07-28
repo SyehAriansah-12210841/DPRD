@@ -47,8 +47,8 @@ Route::prefix('/sekretariat')->group(function () {
     Route::get('/tupoksi', [VisitorController::class, 'tupoksiSekretariat'])->name('tupoksiSekretariat');
     Route::get('/visi-misi', [VisitorController::class, 'visimisiSekretariat'])->name('visimisiSekretariat');
     Route::get('/struktur-organisasi', [VisitorController::class, 'strukturOrganisasiSekretariat'])->name('strukturOrganisasiSekretariat');
+    Route::get('/pejabat-struktural', [VisitorController::class, 'anggotaSekretariat'])->name('anggotaSekretariat');
     Route::get('/{id}', [VisitorController::class, 'sekretariatDetail'])->name('sekretariatDetail');
-    Route::get('/', [VisitorController::class, 'anggotaSekretariat'])->name('anggotaSekretariat');
 });
 // Admin Dashboard
 Route::prefix('/admin')->group(function () {

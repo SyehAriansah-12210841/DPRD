@@ -56,7 +56,7 @@
                         <label for="pendidikan" class="form-label">Pendidikan</label>
                         <input type="text" name="pendidikan"
                             class="form-control @error('pendidikan') is-invalid @enderror" id="pendidikan"
-                            aria-describedby="name" value="{{old('pendidikan')}}">
+                            aria-describedby="name" value="{{old('pendidikan')}}" placeholder="Doktor, Sarjana">
                         @error('pendidikan')
                         <div class="invalid-feedback">
                             {{$message}}
@@ -67,7 +67,8 @@
                     <div class="mb-3">
                         <label for="jabatan" class="form-label">Jabatan</label>
                         <input type="text" name="jabatan" class="form-control @error('jabatan') is-invalid @enderror"
-                            id="jabatan" aria-describedby="name" value="{{old('jabatan')}}">
+                            id="jabatan" aria-describedby="name" value="{{old('jabatan')}}"
+                            placeholder="cth: Sekretaris, Pejabat Fungsional">
                         @error('jabatan')
                         <div class="invalid-feedback">
                             {{$message}}

@@ -124,7 +124,7 @@
                         })
                     </script>
                     <div class="mb-3">
-                        <label for="jabatan_akd" class="form-label">Badan AKD</label>
+                        <label for="jabatan_akd" class="form-label">Jabatan AKD</label>
                         <input type="text" name="jabatan_akd"
                             class="form-control @error('jabatan_akd') is-invalid @enderror" id="jabatan_akd"
                             aria-describedby="name"

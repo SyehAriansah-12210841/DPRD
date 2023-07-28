@@ -14,7 +14,6 @@
 <div class="container mt-4">
     <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
         <p class="section-title bg-white text-center  text-primary px-3">Pejabat Struktural</p>
-        <!-- <h1 class="mb-5">Kepemimpiman DRPD kapuas Hulu</h1> -->
     </div>
 
     {{-- ketua --}}
@@ -46,7 +45,6 @@
                     <div class="overflow-hidden" style="max-height: 250px">
                         <img src="/storage/{{$anggota->gambar}}" class="card-img-top" alt="...">
                     </div>
-
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title text-center">{{$anggota->nama}}</h5>
                         <div class="mt-auto">
@@ -60,9 +58,5 @@
         @empty
 
         @endforelse
-
-
     </div>
-
-
 </div @endsection

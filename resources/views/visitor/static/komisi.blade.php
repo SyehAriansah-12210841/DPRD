@@ -34,9 +34,9 @@
     <div class="row justify-content-center mt-5">
         <div class="col-6 col-md-3">
             <a href="/akd/komisi/komisi-a">
-                <div class="card border-0" style="width: 18re;">
+                <div class="card border-0">
                     <img src="{{asset('/img/komisi-a.png')}}" class="card-img-top mx-auto" style="max-width: 100px;"
-                        alt="...">
+                        alt="komisi">
                     <div class="card-body">
                         <p class="card-title fw-bold text-center">Komisi A</p>
                     </div>
@@ -45,9 +45,9 @@
         </div>
         <div class="col-6 col-md-3">
             <a href="/akd/komisi/komisi-b">
-                <div class="card border-0" style="width: 18re;">
+                <div class="card border-0">
                     <img src="{{asset('/img/komisi-b.png')}}" class="card-img-top mx-auto" style="max-width: 100px;"
-                        alt="...">
+                        alt="komisi">
                     <div class="card-body">
                         <p class="card-title fw-bold text-center">Komisi B</p>
                     </div>
@@ -56,9 +56,9 @@
         </div>
         <div class="col-6 col-md-3">
             <a href="/akd/komisi/komisi-c">
-                <div class="card border-0" style="width: 18re;">
+                <div class="card border-0">
                     <img src="{{asset('/img/komisi-c.png')}}" class="card-img-top mx-auto" style="max-width: 100px;"
-                        alt="...">
+                        alt="komisi">
                     <div class="card-body">
                         <p class="card-title fw-bold text-center">Komisi C</p>
                     </div>

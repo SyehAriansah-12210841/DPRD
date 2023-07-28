@@ -3,7 +3,7 @@
     <div id="header-carousel" class="carousel slide " data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active ">
-                <img class="img-fluid w-100 rounded" src="/img/carousel.jpg" alt="Image">
+                <img class="img-fluid w-100 rounded" src="{{asset('/img/carousel.jpg')}}" alt="Image">
                 <div class="carousel-caption">
                     <div class="container ms-5">
                         <div class="row justify-content-start">
