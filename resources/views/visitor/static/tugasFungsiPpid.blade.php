@@ -5,7 +5,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('home')}}">Beranda</a></li>
-            <li class="breadcrumb-item"><a href="#">Pelayanan dan Informasi</a></li>
+            <li class="breadcrumb-item"><a href="#">PPID</a></li>
             <li class="breadcrumb-item"><a class="{{(request()->is('ppid/*')) ? 'text-secondary' : ''}}"
                     href="{{route('tugasFungsiPpid')}}">Tugas dan Fungsi PPID</a></li>
         </ol>

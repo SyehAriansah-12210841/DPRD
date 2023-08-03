@@ -1,6 +1,6 @@
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-2 shadow mb-2">
-    <a href="/" class="navbar-brand d-flex align-items-center me-5">
+    <a href="/" class="navbar-brand d-flex align-items-center">
         <img src="{{asset('/img/logo.png')}}" style="height: 3rem" alt="DPRD kapuas hulu logo">
     </a>
     <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -87,7 +87,7 @@
             </div>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle {{(request()->is('profil/*')) ? 'text-secondar' : ''}}"
-                    data-bs-toggle="dropdown">Informasi dan Pelayanan Publik</a>
+                    data-bs-toggle="dropdown">Informasi dan Pelayanan</a>
                 <div class="dropdown-menu bg-light m-0">
                     <a href="https://ppid.kapuashulukab.go.id/" class="dropdown-item">PPID Kapuas Hulu</a>
                     <a href="https://www.lapor.go.id/instansi/sekretariat-dprd-kabupaten-kapuas-hulu"
