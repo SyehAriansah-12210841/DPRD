@@ -24,10 +24,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [VisitorController::class, 'home'])->name('home');
 Route::prefix('/profil')->group(function () {
     Route::get('/anggota', [VisitorAnggotaController::class, 'index'])->name('all');
-    Route::get('/sejarah', [VisitorController::class, 'sejarah'])->name('sejarah');
-    Route::get('/kedudukan', [VisitorController::class, 'kedudukan'])->name('kedudukan');
     Route::get('/pimpinan', [VisitorController::class, 'pimpinan'])->name('pimpinan');
-    Route::get('/tata-tertib', [VisitorController::class, 'tataTertib'])->name('tataTertib');
     Route::get('/{anggota:id}', [VisitorAnggotaController::class, 'show'])->name('detail');
 });
 
@@ -43,12 +40,30 @@ Route::prefix('/fraksi')->group(function () {
     Route::get('/{fraksi:slug}', [VisitorController::class, 'fraksiDetail'])->name('fraksiDetail');
 });
 Route::prefix('/sekretariat')->group(function () {
-    Route::get('/sejarah', [VisitorController::class, 'sejarahSekretariat'])->name('sejarahSekretariat');
     Route::get('/tupoksi', [VisitorController::class, 'tupoksiSekretariat'])->name('tupoksiSekretariat');
-    Route::get('/visi-misi', [VisitorController::class, 'visimisiSekretariat'])->name('visimisiSekretariat');
     Route::get('/struktur-organisasi', [VisitorController::class, 'strukturOrganisasiSekretariat'])->name('strukturOrganisasiSekretariat');
     Route::get('/pejabat-struktural', [VisitorController::class, 'anggotaSekretariat'])->name('anggotaSekretariat');
     Route::get('/{id}', [VisitorController::class, 'sekretariatDetail'])->name('sekretariatDetail');
+});
+Route::prefix('/pelayanan-informasi')->group(function () {
+    Route::get('/visi-misi-bupati', [VisitorController::class, 'visiMisiBupati'])->name('visiMisiBupati');
+    Route::get('/motto-pelayanan', [VisitorController::class, 'mottoPelayanan'])->name('mottoPelayanan');
+    Route::get('/maklumat-pelayanan', [VisitorController::class, 'maklumatPelayanan'])->name('maklumatPelayanan');
+});
+Route::prefix('/ppid')->group(function () {
+    Route::get('/profil-singkat-ppid', [VisitorController::class, 'profilSingkatPpid'])->name('profilSingkatPpid');
+    Route::get('/sk-ppid', [VisitorController::class, 'skppid'])->name('skppid');
+    Route::get('/visi-misi', [VisitorController::class, 'visiMisi'])->name('visiMisi');
+    Route::get('/tugas-fungsi-ppid', [VisitorController::class, 'tugasFungsiPpid'])->name('tugasFungsiPpid');
+    Route::get('/standar-pelayanan', [VisitorController::class, 'standarPelayanan'])->name('standarPelayanan');
+    Route::get('/struktur-organisasi', [VisitorController::class, 'strukturOrganisasi'])->name('strukturOrganisasi');
+    Route::get('/jadwal-pelayanan', [VisitorController::class, 'jadwalPelayanan'])->name('jadwalPelayanan');
+    Route::get('/maklumat-pelayanan', [VisitorController::class, 'maklumatPelayanan'])->name('maklumatPelayananPpid');
+    Route::get('/kumpulan-peraturan-keterbukaan-informasi', [VisitorController::class, 'kumpulanPeraturanKeterbukaanInformasi'])->name('kumpulanPeraturanKeterbukaanInformasi');
+    Route::get('/dokumen-sop', [VisitorController::class, 'dokumenSop'])->name('dokumenSop');
+    Route::get('/formulir-permohonan', [VisitorController::class, 'formulirPermohonan'])->name('formulirPermohonan');
+    Route::get('/daftar-informasi-publik', [VisitorController::class, 'daftarInformasiPublik'])->name('daftarInformasiPublik');
+    Route::get('/form-permohonan-online', [VisitorController::class, 'formulirPermohonanOnline'])->name('formulirPermohonanOnline');
 });
 // Admin Dashboard
 Route::prefix('/admin')->group(function () {

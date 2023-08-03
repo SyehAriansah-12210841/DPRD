@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>@yield('title')</title>
+    <title>@yield('title') | Website Resmi DPRD Kapuas Hulu</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -33,8 +33,9 @@
     <!-- Template Stylesheet -->
     <link href="{{asset('/css/style.css')}}" rel="stylesheet">
     <style>
-        .active{
-            color: yellow;
+        .hover-bg:hover {
+            background-color: ghostwhite;
+            transition: .5s
         }
     </style>
 </head>

@@ -11,22 +11,84 @@ use Illuminate\Support\Str;
 class VisitorController extends Controller
 {
     // Halaman Statis
-    public function sejarah()
-    {
-        return view('visitor.static.sejarah');
-    }
-    public function kedudukan()
-    {
-        return view('visitor.static.kedudukan');
-    }
-
-    public function tataTertib()
-    {
-        return view('visitor.static.tataTertib');
-    }
     public function komisi()
     {
         return view('visitor.static.komisi');
+    }
+    public function tupoksiSekretariat()
+    {
+        return view('visitor.static.tupoksiSekretariat');
+    }
+    public function strukturOrganisasiSekretariat()
+    {
+        return view('visitor.static.strukturOrganisasiSekretariat');
+    }
+    // informasi
+    public function visiMisiBupati()
+    {
+        return view('visitor.static.visiMisiBupati');
+    }
+    public function mottoPelayanan()
+    {
+        return view('visitor.static.mottoPelayanan');
+    }
+    public function maklumatPelayanan()
+    {
+        return view('visitor.static.maklumatPelayanan');
+    }
+
+    // ppid
+    public function profilSingkatPpid()
+    {
+        return view('visitor.static.profilSingkatPpid');
+    }
+    public function skppid()
+    {
+        return view('visitor.static.skppid');
+    }
+    public function visiMisi()
+    {
+        return view('visitor.static.visiMisi');
+    }
+    public function tugasFungsiPpid()
+    {
+        return view('visitor.static.tugasFungsiPpid');
+    }
+    public function standarPelayanan()
+    {
+        return view('visitor.static.standarPelayanan');
+    }
+    public function strukturOrganisasi()
+    {
+        return view('visitor.static.strukturOrganisasi');
+    }
+    public function jadwalPelayanan()
+    {
+        return view('visitor.static.jadwalPelayanan');
+    }
+    public function maklumatPelayananPpid()
+    {
+        return view('visitor.static.maklumatPelayanan');
+    }
+    public function kumpulanPeraturanKeterbukaanInformasi()
+    {
+        return view('visitor.static.kumpulanPeraturanKeterbukaanInformasi');
+    }
+    public function dokumenSop()
+    {
+        return view('visitor.static.dokumenSop');
+    }
+    public function formulirPermohonan()
+    {
+        return view('visitor.static.formulirPermohonan');
+    }
+    public function daftarInformasiPublik()
+    {
+        return view('visitor.static.daftarInformasiPublik');
+    }
+    public function formulirPermohonanOnline()
+    {
+        return view('visitor.static.formulirPermohonanOnline');
     }
 
     // Halaman Dinamis
